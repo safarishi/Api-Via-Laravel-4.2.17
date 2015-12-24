@@ -1,0 +1,12 @@
+<div ng-controller="userCollectionController">
+    <div collection-repeat="new in news" ui-sref="main.mainText" class="newsBoxStyle userCollectionNewsBox" ng-class="newsBoxStyle"
+         ng-click="collectNews(new.article.Id)">
+        <div>
+            <img ng-src="{{new.article.PicName}}" class="homeNewImg" draggable="false" ng-if="newsImgShow">
+            <div ng-class="{'homeNewMain': newsImgShow == true,'textNewMain': newsImgShow == false}">
+                <h2 class="homeNewTitle">{{new.article.Title}}</h2>
+                <p class="homeNewAuthor"><span ng-if="originShow && new.article.Source">来源：<span>{{new.article.Source}}</span> &nbsp;</span><span ng-if="new.article.Author">作者：{{new.article.Author}}&nbsp;</span> <span ng-if="new.article.PublishUtcDate">{{new.article.PublishUtcDate}}</span></p>
+            </div>
+        </div>
+    </div>
+</div>

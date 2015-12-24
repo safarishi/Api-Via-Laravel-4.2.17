@@ -1,0 +1,17 @@
+<ion-list ng-if="userHead">
+    <ion-item class="userItem userDataHead" menu-close ui-sref="main.imgCrop">
+        <div class="butLine">
+            <span>头像</span>
+            <img class="userDataImg" ng-src="{{userDataImg}}">
+        </div>
+    </ion-item>
+</ion-list>
+<ion-list>
+    <ion-item class="userItem" ng-repeat="but in butNames" menu-close ui-sref="{{but.sref}}" ng-click="popBox($index)">
+        <div class="butLine">
+            <span>{{but.name}}<span class="userArrow"></span></span>
+            <span><span class="arrow2">{{but.data}}</span><span class="userArrow"></span></span>
+            <span class="redPoint" ng-if="but.point"></span>
+        </div>
+    </ion-item>
+</ion-list>

@@ -1,0 +1,17 @@
+<div class="slideDownBox">
+    <ion-scroll class="scrollHeight homeSlideDown" direction="y" paging="false" zooming="true" delegate-handle="newsScroll" ng-controller="columnBox">
+        <table>
+            <tbody>
+                <tr  ng-repeat="columnBox in columnBoxes">
+                    <td data-id="{{column.cid}}"
+                        ng-repeat="column in columnBox"
+                        ng-class="{'choiceSelect': column.selected == true}"
+                        ng-style="{'width': boxArea,'height': boxAreaH}"
+                        ng-click="addColumns(column.cid,column,$index,column.id)">
+                        {{column.name}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </ion-scroll>
+</div>

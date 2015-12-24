@@ -1,0 +1,15 @@
+<ion-pane class="newsBar">
+    <ion-scroll class="scroll-view ionic-scroll homeBarScroll" direction="x"
+                scrollbar-x="false" scrollbar-y="false" paging="false"
+                delegate-handle="newsScroll" ng-hide="slideUpShow" ng-animate="'hide-animation'">
+        <div class="barName">
+            <div ng-repeat="newsBar in newsBars" data-id = "{{newsBar.id}}" class="newsBarSlide li-{{$index}}" on-touch='newsBarTouch({{newsBar.id}},$event)' ng-class="{'on': $index == 0}">
+                {{newsBar.name}}
+            </div >
+        </div>
+    </ion-scroll>
+    <div class="homeBarScroll" ng-show="slideUpShow">
+        <span class="slideUpBar">点击添加更多栏目</span>
+    </div>
+    <div class="slidePage" on-touch="slideUp()"></div>
+</ion-pane>

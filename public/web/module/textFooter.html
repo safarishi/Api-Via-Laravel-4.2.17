@@ -1,0 +1,9 @@
+<!--页脚-->
+<div class="footerBut" ng-show="footerCommentShow">
+    <span on-touch="closeFooter()">取消</span>
+    <span>写评论</span>
+    <span on-touch="sendOut()">发送</span>
+</div>
+<textarea class="commentText" ng-class="{'footerText': footerCommentShow,'commentTextArea':footerCommentShow}" placeholder="   评论..." ng-model="test"  on-touch="sendOutBox('commentThis')" placeholder=""></textarea>
+<div class="sharebut" ng-show="!footerCommentShow" on-touch="share()"></div>
+<div class="collectionbut" ng-show="!footerCommentShow" on-touch="collect()"></div>

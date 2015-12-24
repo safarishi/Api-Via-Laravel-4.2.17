@@ -1,0 +1,24 @@
+<!--有回复的聊天框-->
+<div ng-repeat="comment in comments" class="commentBox">
+    <div class="userHand">
+        <img ng-src="{{comment.user.avatar_url}}" draggable="false" class="userPic">
+    </div>
+    <div class="commentMain">
+        <p>
+            <span class="userName">{{comment.user.name}}</span>
+            <span class="informationTime">{{comment.created_at}}</span>
+        </p>
+        <p class="commentMainWord">{{comment.content_info.comment.content}}</p>
+        <p class="commentMainWord">{{comment.content_info.sys}}</p>
+        <div class="commentBack">
+            <img class="commentBackImg" ng-src="{{comment.content_info.owner.avatar_url}}" draggable="false">
+            <div class="commentBackMain">
+                <p>
+                    <span class="commentBackName">{{comment.content_info.owner.name}}</span>
+                    <span class="commentBackTime">{{comment.content_info.comment.created_at}}</span>
+                </p>
+                <p class="commentBackData">{{comment.content_info.reply}}</p>
+            </div>
+        </div>
+    </div>
+</div>

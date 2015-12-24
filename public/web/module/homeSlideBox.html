@@ -1,0 +1,10 @@
+<div class="ion-scroll-news slideBoxMargin" ng-controller="slideBarController">
+    <ion-slide-box show-pager="true" slide-interval="true" does-continue="true" on-slide-changed="slideFunc(index)">
+        <ion-slide ng-repeat="slideNew in slideNews" ui-sref="main.mainText" ng-click="mainTextData(slideNew.Id,slideNew.OperType)">
+            <img class="slideIndex" ng-src="{{slideNew.PicName}}" draggable="false">
+            <div class="slideAbstract">
+                <span class="slideAbstractNews" ng-class="{'show': $index == 0}">{{slideNew.Title}}</span>
+            </div>
+        </ion-slide>
+    </ion-slide-box>
+</div>

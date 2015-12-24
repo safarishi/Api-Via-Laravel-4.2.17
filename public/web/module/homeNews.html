@@ -1,0 +1,11 @@
+<div class="ion-scroll-news">
+    <div ng-repeat="new in news" ui-sref="main.mainText" ng-click="mainTextData(new.Id,new.OperType)" data-id="{{new.Id}}" class="newsBoxStyle" ng-class="newsBoxStyle">
+        <div>
+            <img ng-src="{{new.PicName}}" class="homeNewImg" draggable="false" ng-show="newsImgShow" ng-if="new.PicName">
+            <div ng-class="{'homeNewMain': newsImgShow == true && new.PicName,'textNewMain': newsImgShow == false || !new.PicName}">
+                <h2 class="homeNewTitle">{{new.Title}}</h2>
+                <p class="homeNewAuthor"><span ng-show="originShow" ng-if="new.Source">来源：<span>{{new.Source}}</span>&nbsp;</span> <span ng-if="new.Author">作者：{{new.Author}}&nbsp;</span> <span ng-if="new.PublishUtcDate">{{new.PublishUtcDate}}</span></p>
+            </div>
+        </div>
+    </div>
+</div>

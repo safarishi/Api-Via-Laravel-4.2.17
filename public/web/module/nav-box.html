@@ -1,0 +1,23 @@
+<ion-view>
+    <!--内容-->
+    <div>
+        <ion-nav-view name="content"></ion-nav-view>
+    </div>
+    <!--头部-->
+    <div ng-if="headerShow">
+        <ion-nav-view name="header"></ion-nav-view>
+    </div>
+    <!--页脚-->
+    <div ng-controller="footerController">
+        <ion-footer-bar ng-if="footerShow"
+                        class="footer bar-assertive"
+                        keyboard-attach ng-show="footerShow"
+                        ng-class="fooyerStyle"
+                        ng-style="footerStyle">
+            <ion-nav-view class="footerView" name="footer"></ion-nav-view>
+        </ion-footer-bar>
+    </div>
+    <!--遮罩层-->
+    <div class="footerMaskLayer" ng-controller="footerController" ng-show="footerMaskLayerShow"></div>
+    <div class="slideMask" ng-show="slideMenu" on-drag-end="slideMenuHide()" ng-click="slideHide()"></div>
+</ion-view>

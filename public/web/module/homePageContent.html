@@ -1,0 +1,10 @@
+<ion-content padding="false" scroll="false" overflow-scroll="false" has-bouncing="true">
+    <ion-scroll on-scroll="scrollFun()" class="scrollHeight" direction="y" paging="false" zooming="false" delegate-handle="mainScroll" ng-controller="homeController">
+        <ion-refresher ng-if="refresherShow" pulling-icon="ion-arrow-down-c" class="refresher" pulling-text="下拉刷新..." on-refresh="reLoadingHome()"></ion-refresher>
+        <newsbar></newsbar>
+        <slide-down></slide-down>
+        <slidebox ng-show = "slideDelete"></slidebox>
+        <homenews></homenews>
+        <ion-infinite-scroll class="infinite" distance="1%" style="" ng-show="infiniteShow"></ion-infinite-scroll>
+    </ion-scroll>
+</ion-content>

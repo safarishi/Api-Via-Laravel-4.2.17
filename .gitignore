@@ -1,0 +1,14 @@
+/bootstrap/compiled.php
+/vendor
+/app/storage/uploads
+composer.phar
+composer.lock
+.env.*.php
+.env.php
+.DS_Store
+Thumbs.db
+/app/config/safarishi
+/public/uploads
+/app/tests/controllers
+/app/config/testing/database.php
+/public/captchaTmp.jpg
